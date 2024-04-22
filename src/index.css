@@ -1,13 +1,69 @@
+:root {
+  --tertiary-color: #AAABB8;
+  --secondary-color: #474787;
+  --main-color: #2C2C54;
+  --text-color: #ECECEC;
+}
+
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.caixa {
+  display: flex;
+  flex-direction: column;
+  background-color: #474787;
+  border: 3px solid var(--tertiary-color);
+  width: 50vh;
+  padding: 20px;
+  font-size: 1.25rem;
+}
+
+.botao {
+  cursor: pointer;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 4px 2px;
+  transition-duration: 0.4s
+}
+
+.botao:hover {
+  background-color: var(--tertiary-color);
+  color: black;
 }

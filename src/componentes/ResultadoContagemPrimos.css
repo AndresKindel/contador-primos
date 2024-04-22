@@ -1,0 +1,9 @@
+#resultado {
+    font-size: 1.75rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#resultado p {
+    margin: 0;
+}

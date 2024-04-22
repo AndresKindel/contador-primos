@@ -1,0 +1,39 @@
+#botao-historico {
+    margin-top: 10px;
+}
+
+#historico-conteudo {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    overflow: auto;
+    background-color: var(--secondary-color);
+    border: 3px solid var(--tertiary-color);
+}
+
+#historico-conteudo h2 {
+    border-bottom: 0.2rem solid;
+}
+
+.mostrar {
+    display: block;
+}
+
+.esconder {
+    display: none;
+}
+
+.historico-item {
+    padding: 0;
+    border-bottom: 0.2rem solid;
+}
+
+.consulta {
+    font-weight: bold;
+}
+
+.historico-item p {
+    margin: 3px;;
+}
