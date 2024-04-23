@@ -9,10 +9,14 @@ function Formulario({ onSubmit }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (!/^\d+$/.test(valorInput)) {
+      alert("Por favor digite um número inteiro.");
+      return;
+    }
     const inputNumero = parseInt(valorInput, 10);
 
-    if (isNaN(inputNumero) || inputNumero < 1) {
-        alert("Por favor digite um número positivo maior que 1.");
+    if (isNaN(valorInput) || inputNumero <= 1 || !Number.isInteger(inputNumero)) {
+        alert("Por favor digite um número inteiro positivo maior que 1.");
         return;
     }
 

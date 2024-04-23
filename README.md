@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Desafio Desenvolvimento Web - Laboratório Bridge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse projeto foi criado por Andres Kindel Barbosa.
 
-## Available Scripts
+## Backend
 
-In the project directory, you can run:
+Para o backend, foi utilizado Java com Springboot. As seguintes dependências foram utilizadas:
 
-### `npm start`
+Spring Web: é um starter para a criação de aplicações web com Spring Boot. Ela inclui componentes essenciais para criar aplicativos web RESTful, como Spring MVC, Tomcat (o servidor web embutido), Jackson para manipulação de JSON, e outros recursos para manipulação de requisições HTTP.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Spring Boot Devtools: fornece ferramentas de desenvolvimento para acelerar o processo de desenvolvimento e depuração de aplicativos Spring Boot.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Spring Data JPA: starter para trabalhar com a API de Persistência Java (JPA).
 
-### `npm test`
+PostgreSQL Driver: driver JDBC para o banco de dados PostgreSQL. É usado para conectar um aplicativo Spring Boot a um banco de dados PostgreSQL em tempo de execução.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Frontend
 
-### `npm run build`
+Para o frontend, foi utilizado o framework React e para a estilização CSS nativo.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Pré-requisitos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Node.js e npm
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### PostgreSQL
 
-### `npm run eject`
+## Configurando o banco de dados
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Primeiramente, é necessário rodar o PostgreSQL no localhost com a porta 5432.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Então, o próximo passo é criar um banco de dados com o nome `contadorprimos`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Agora só resta modificar o arquivo `application.properties` no caminho `backend/src/main/resources` com o seu usuário e senha. O usuário padrão é 'postgres' e a senha padrão 'password'.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Como rodar o Backend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Na pasta `backend` rodar o comando `mvn install` no terminal, para instalar as dependências.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Executar o arquivo `ContadorPrimosApplication.java` na sua IDE de escolha (para o desenvolvimento foi utilizado Intellij).
 
-### Code Splitting
+## Como rodar o Frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Basta acessar a pasta `frontend` e utilizar o comando `npm install` no terminal.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Agora o app deve estar disponível para se utilizar no endereço http://localhost:3000/.
