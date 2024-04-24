@@ -24,22 +24,32 @@ Para o frontend, foi utilizado o framework React e para a estilização CSS nati
 
 ### PostgreSQL
 
+### Docker (opcional)
+
+# Como rodar com Docker
+
+Basta entrar na pasta principal do projeto 'contador-primos' e rodar no terminal os comandos `docker-compose build` e depois `docker-compose up`
+
+Agora o app deve estar disponível para se utilizar no endereço http://localhost:3000/.
+
+# Como rodar localmente
+
 ## Configurando o banco de dados
 
 Primeiramente, é necessário rodar o PostgreSQL no localhost com a porta 5432.
 
 Então, o próximo passo é criar um banco de dados com o nome `contadorprimos`.
 
-Agora só resta modificar o arquivo `application.properties` no caminho `backend/src/main/resources` com o seu usuário e senha. O usuário padrão é 'postgres' e a senha padrão 'password'.
+Agora só resta modificar o arquivo `application.properties` no caminho `backend/src/main/resources` com o seu usuário e senha. O usuário padrão é 'postgres' e a senha padrão 'password'. Também é necessario mudar o `spring.datasource.url=` para `jdbc:postgresql://localhost:5432/contadorprimos`
 
 
-## Como rodar o Backend
+## Backend
 
 Na pasta `backend` rodar o comando `mvn install` no terminal, para instalar as dependências.
 
 Executar o arquivo `ContadorPrimosApplication.java` na sua IDE de escolha (para o desenvolvimento foi utilizado Intellij).
 
-## Como rodar o Frontend
+## Frontend
 
 Basta acessar a pasta `frontend` e utilizar o comando `npm install` no terminal.
 
