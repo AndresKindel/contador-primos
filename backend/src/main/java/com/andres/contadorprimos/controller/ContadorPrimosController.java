@@ -44,21 +44,49 @@ public class ContadorPrimosController {
     }
 
     public int contarPrimos(int n) {
+        if (n < 2) {
+            return 0;
+        }
+        boolean[] ehPrimo = new boolean[n + 1];
+        for (int i = 2; i <= n; i++) {
+            ehPrimo[i] = true;
+        }
+
+        for (int p = 2; p * p <= n; p++) {
+            if (ehPrimo[p]) {
+                for (int i = p * p; i <= n; i += p) {
+                    ehPrimo[i] = false;
+                }
+            }
+        }
+
         int contador = 0;
         for (int i = 2; i <= n; i++) {
-            if (ehPrimo(i)) {
+            if (ehPrimo[i]) {
                 contador++;
             }
         }
+
         return contador;
     }
 
     public boolean ehPrimo(int n) {
-        for (int i = 2; i < n; i++) {
-            if (n % i == 0) {
+        if (n <= 1) {
+            return false;
+        }
+        if (n <= 3) {
+            return true;
+        }
+        if (n % 2 == 0 || n % 3 == 0) {
+            return false;
+        }
+        int limite = (int) Math.sqrt(n);
+        for (int i = 5; i <= limite; i += 6) {
+            if (n % i == 0 || n % (i + 2) == 0) {
                 return false;
             }
         }
         return true;
     }
+
 }

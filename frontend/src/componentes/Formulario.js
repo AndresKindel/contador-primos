@@ -15,6 +15,11 @@ function Formulario({ onSubmit }) {
     }
     const inputNumero = parseInt(valorInput, 10);
 
+    if(inputNumero > 1000000000) {
+      alert("Por favor digite um número inteiro positivo menor que 1 bilhão.");
+      return;
+    }
+
     if (isNaN(valorInput) || inputNumero <= 1 || !Number.isInteger(inputNumero)) {
         alert("Por favor digite um número inteiro positivo maior que 1.");
         return;
