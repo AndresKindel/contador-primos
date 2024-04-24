@@ -43,4 +43,6 @@ Executar o arquivo `ContadorPrimosApplication.java` na sua IDE de escolha (para 
 
 Basta acessar a pasta `frontend` e utilizar o comando `npm install` no terminal.
 
+Após isso, o comando `npm start` faz o frontend rodar.
+
 Agora o app deve estar disponível para se utilizar no endereço http://localhost:3000/.
